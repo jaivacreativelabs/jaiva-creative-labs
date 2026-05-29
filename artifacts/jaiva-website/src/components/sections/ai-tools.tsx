@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { SiOpenai, SiZapier, SiGooglecloud, SiAirtable, SiSlack, SiWhatsapp } from "react-icons/si";
-import { BrainCircuit, Workflow, Zap, Cloud, MessageSquare, Bot } from "lucide-react";
+import { BrainCircuit, Workflow, Zap, Cloud, MessageSquare } from "lucide-react";
 
 export function AITools() {
   const tools = [
@@ -18,43 +18,39 @@ export function AITools() {
   ];
 
   return (
-    <section id="ai-tools" className="py-24 bg-background relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 relative z-10 mb-12">
+    <section id="ai-tools" className="py-32 bg-[#09090B]">
+      <div className="container mx-auto px-8 md:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-3xl mx-auto"
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center"
         >
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6">
+          <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block mb-4">
+            PLATFORMS & TOOLS
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-white">
             Advanced AI & Automation Platforms We Use
           </h2>
-          <p className="text-muted-foreground text-lg">
-            We leverage industry-leading tools to build robust, scalable, and intelligent workflows.
-          </p>
         </motion.div>
-      </div>
 
-      <div className="w-full relative py-8 overflow-hidden flex flex-col items-center">
-        {/* Gradients to fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-        
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8 max-w-6xl px-4 relative z-0">
-            {tools.map((tool, index) => (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                key={index} 
-                className="flex items-center gap-3 px-6 py-4 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-primary/30 transition-all cursor-default"
-              >
-                <tool.icon className="w-6 h-6 text-white/70" />
-                <span className="text-white/80 font-medium whitespace-nowrap">{tool.name}</span>
-              </motion.div>
-            ))}
+        <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto mt-16">
+          {tools.map((tool, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.05 }}
+              key={index} 
+              className="group border border-[#1A1A1F] px-8 py-5 flex flex-col items-center gap-3 rounded-sm bg-[#0D0D10] hover:border-[#0DCCF2]/30 transition-all min-w-[140px]"
+            >
+              <tool.icon className="w-7 h-7 text-[#B8B8C0]/60 group-hover:text-[#0DCCF2] transition-colors" />
+              <span className="text-xs text-[#B8B8C0]/60 tracking-wide group-hover:text-[#B8B8C0] transition-colors font-medium text-center">
+                {tool.name}
+              </span>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

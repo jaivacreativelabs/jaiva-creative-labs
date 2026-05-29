@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export function Nav() {
@@ -9,7 +7,7 @@ export function Nav() {
   
   useEffect(() => {
     return scrollY.onChange((latest) => {
-      setIsScrolled(latest > 50);
+      setIsScrolled(latest > 10);
     });
   }, [scrollY]);
 
@@ -23,46 +21,37 @@ export function Nav() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md border-b border-border py-4" : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-8 md:px-16 border-b border-[#1A1A1F] transition-colors duration-300 ${
+        isScrolled ? "bg-[#09090B]/95 backdrop-blur-sm" : "bg-transparent"
       }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <span className="text-xl md:text-2xl font-bold font-display tracking-tight text-white">
-            JAIVA <span className="text-primary">Creative Labs</span>
-          </span>
+      <a href="#" className="flex items-center gap-1">
+        <span className="text-xl font-bold font-display text-white">JAIVA</span>
+        <span className="text-xl font-display text-[#B8B8C0]">Creative Labs</span>
+      </a>
+
+      <nav className="hidden md:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={link.href}
+            className="text-[#B8B8C0] text-sm font-medium tracking-wide hover:text-white transition-colors"
+          >
+            {link.name}
+          </a>
+        ))}
+      </nav>
+
+      <div className="flex items-center">
+        <a 
+          href="#contact"
+          className="bg-[#0DCCF2] text-[#09090B] text-sm font-semibold tracking-wide px-5 py-2 rounded-none hover:bg-[#09B8DB] transition-colors inline-block"
+        >
+          Get Free Consultation
         </a>
-
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
-        </nav>
-
-        <div className="hidden md:flex items-center gap-4">
-          <a href="#contact">
-            <Button variant="outline" className="border-border hover:bg-white/5">
-              Book Demo
-            </Button>
-          </a>
-          <a href="#contact">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Get Free Consultation
-            </Button>
-          </a>
-        </div>
-        
-        {/* Mobile Nav Toggle could go here */}
       </div>
     </motion.header>
   );

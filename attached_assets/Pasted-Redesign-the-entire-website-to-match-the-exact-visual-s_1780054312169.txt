@@ -1,0 +1,116 @@
+Redesign the entire website to match the exact visual style of the reference UI.
+
+DESIGN SYSTEM
+
+Style:
+- Futuristic enterprise SaaS
+- Cyberpunk-inspired automation agency
+- Premium B2B technology company
+- Dark theme with neon cyan accents
+- Minimal, clean, high-end aesthetic
+
+Colors:
+- Primary Accent: #0DCCF2
+- Primary Hover: #09B8DB
+- Background: #09090B
+- Surface: #0D0D10
+- Border/Grid: #1A1A1F
+- Primary Text: #FFFFFF
+- Secondary Text: #B8B8C0
+
+Typography:
+- Large bold geometric headings
+- Font similar to Space Grotesk, Satoshi, Inter, or General Sans
+- Hero heading weight: 700-800
+- Navigation weight: 500
+- Letter spacing on labels and buttons
+
+LAYOUT
+
+Navbar:
+- Transparent dark navbar
+- Logo on left
+- Navigation links centered
+- CTA button on right
+- Minimal hover effects using cyan accent
+- Thin bottom border
+
+Hero Section:
+- Full viewport height
+- Large multi-line heading
+- White text with key phrase highlighted in cyan
+- Small uppercase status label above heading
+- Supporting paragraph below
+- Two CTA buttons side by side
+- Plenty of whitespace
+- Left aligned content
+
+Background:
+- Dark black background
+- Subtle futuristic grid pattern
+- Thin glowing blueprint-style lines
+- Very low opacity
+- No bright gradients
+- Premium and professional
+
+Buttons:
+Primary:
+- Cyan background (#0DCCF2)
+- Black text
+- Sharp corners (not pill shaped)
+- Subtle hover animation
+
+Secondary:
+- Transparent
+- Thin border
+- White text
+- Border glow on hover
+
+Sections:
+- Large spacing between sections
+- Clean grid layouts
+- Thin borders
+- Dark cards
+- Cyan accents only for highlights
+- Consistent vertical rhythm
+
+Animations:
+- Smooth fade-in
+- Subtle hover transitions
+- Slight scale on buttons
+- No excessive motion
+- Professional enterprise feel
+
+Technology Logos Section:
+- Monochrome logos
+- Low opacity gray
+- Center aligned
+- Generous spacing
+
+CARD DESIGN
+
+Cards should have:
+- Dark surfaces
+- 1px subtle borders
+- Hover glow using cyan
+- Clean shadows
+- Minimal design
+- Sharp corners
+
+OVERALL FEEL
+
+The website should look like a premium AI automation company worth millions of dollars, similar to:
+- Palantir
+- Vercel
+- Linear
+- Stripe enterprise pages
+- Modern AI automation agencies
+
+Avoid:
+- Rounded playful UI
+- Bright gradients
+- Colorful elements
+- Generic startup templates
+- Excessive shadows
+
+The final result should visually match the provided reference as closely as possible, including spacing, typography hierarchy, button styles, dark futuristic background grid, cyan accent system, and premium enterprise aesthetic.

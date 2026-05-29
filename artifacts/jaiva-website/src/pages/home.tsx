@@ -27,7 +27,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 selection:text-white">
+    <div className="min-h-screen bg-[#09090B] text-foreground selection:bg-[#0DCCF2]/30 selection:text-white">
       <Nav />
       <main>
         <Hero />
@@ -42,11 +42,12 @@ export default function Home() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ duration: 0.3 }}
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-primary/20 border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors z-50 backdrop-blur-sm"
+            className="fixed bottom-8 right-8 w-12 h-12 rounded-none bg-[#0D0D10] border border-[#1A1A1F] text-[#B8B8C0] flex items-center justify-center hover:text-white hover:border-[#0DCCF2]/40 transition-colors z-50"
             aria-label="Back to top"
           >
             <ArrowUp className="w-5 h-5" />
