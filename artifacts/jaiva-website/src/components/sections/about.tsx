@@ -2,109 +2,78 @@ import { motion } from "framer-motion";
 
 export function About() {
   const expertise = [
-    "AI workflow architecture",
-    "Custom automation template creation",
-    "Intelligent business process automation",
-    "AI chatbot deployment",
-    "Enterprise integration systems",
-    "Data-driven workflow optimization"
+    { title: "AI Workflow Architecture", desc: "Designing robust, scalable automation architectures from the ground up." },
+    { title: "Custom Template Creation", desc: "Building specialized workflow templates that map directly to your operations." },
+    { title: "AI Chatbot Deployment", desc: "Implementing intelligent agents for customer support and internal knowledge." },
+    { title: "Enterprise Integration Systems", desc: "Connecting disparate software ecosystems into a unified flow." },
+    { title: "Process Digitization", desc: "Converting manual, paper-based operations into streamlined digital processes." },
+    { title: "Data-Driven Optimization", desc: "Continuous improvement of workflows based on performance analytics." }
   ];
 
   const industries = [
-    "Manufacturing",
-    "Healthcare",
-    "Education",
-    "Retail & E-commerce",
-    "Logistics",
-    "Real Estate",
-    "Finance",
-    "Waste Management",
-    "Startups & SaaS"
+    "Manufacturing", "Healthcare", "Education", "Retail & E-commerce", 
+    "Logistics", "Real Estate", "Finance", "Waste Management", "Startups & SaaS"
   ];
-
-  const reasons = [
-    { title: "Industry-specific automation solutions", desc: "Tailored to your exact business needs" },
-    { title: "Custom-built workflows", desc: "Designed for your team's specific processes" },
-    { title: "Fast deployment", desc: "Get up and running in weeks, not months" },
-    { title: "Scalable architecture", desc: "Grows alongside your business operations" },
-    { title: "AI-first approach", desc: "Leveraging the latest AI technologies" },
-    { title: "Cost-effective automation", desc: "High ROI on every process automated" },
-    { title: "End-to-end consulting & support", desc: "We are with you every step of the way" }
-  ];
+  
+  const duplicatedIndustries = [...industries, ...industries];
 
   return (
-    <section id="about" className="py-32 bg-[#09090B]">
-      <div className="container mx-auto px-8 md:px-16">
+    <section id="about" className="py-32 md:py-48 bg-[#09090B] overflow-hidden">
+      
+      <div className="max-w-4xl mx-auto px-8 md:px-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-16"
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block mb-4">
-            ABOUT US
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white max-w-2xl">
-            Empowering Businesses Through Automation & AI
+          <h2 className="text-3xl md:text-5xl font-bold font-display leading-tight text-white">
+            We are Workflow Automation Consultants building <br className="hidden md:block"/>
+            <span className="text-[#0DCCF2]">intelligent systems</span> that transform how businesses operate.
           </h2>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          >
-            <p className="text-[#B8B8C0] text-lg leading-relaxed mb-8">
-              We are a team of Workflow Automation Consultants specializing in building intelligent automation systems for businesses across industries. Our mission is to simplify complex operations using AI, automation platforms, and smart integrations. From customer support automation to enterprise workflow orchestration, we help organizations eliminate manual work and accelerate digital transformation.
-            </p>
-            <div className="space-y-4">
-              {expertise.map((item, i) => (
-                <div key={i} className="flex gap-3 items-center">
-                  <span className="text-[#0DCCF2] font-bold">—</span>
-                  <span className="text-[#B8B8C0] text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          >
-            <h3 className="text-xl font-bold text-white mb-6 font-display">Industries We Serve</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {industries.map((ind, i) => (
-                <div key={i} className="border border-[#1A1A1F] p-4 text-sm text-[#B8B8C0] hover:border-[#0DCCF2]/30 hover:text-white transition-all rounded-sm">
-                  {ind}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-          className="mt-16"
-        >
-          <h3 className="text-xl font-bold text-white mb-8 font-display">Why Choose Us</h3>
-          <div className="flex flex-wrap gap-8">
-            {reasons.map((item, i) => (
-              <div key={i} className="border-l-2 border-[#0DCCF2] pl-4 py-1 min-w-[200px]">
-                <div className="text-white text-sm font-semibold mb-1">{item.title}</div>
-                <div className="text-[#B8B8C0] text-xs">{item.desc}</div>
-              </div>
-            ))}
-          </div>
+          <p className="text-[#B8B8C0] text-lg max-w-2xl mt-6">
+            Our mission is to simplify complex operations using AI, advanced automation platforms, and smart integrations. We help organizations eliminate manual work and accelerate their digital transformation.
+          </p>
         </motion.div>
       </div>
+
+      <div className="container mx-auto px-8 md:px-16 mt-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1A1A1F]">
+          {expertise.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-[#09090B] p-8 hover:bg-[#0D0D10] transition-colors"
+            >
+              <div className="text-xs text-[#0DCCF2]/60 font-mono mb-3">
+                {String(i + 1).padStart(2, '0')}
+              </div>
+              <h3 className="text-white font-semibold text-lg font-display">{item.title}</h3>
+              <p className="text-[#B8B8C0] text-sm mt-2 leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-24 overflow-hidden relative">
+        <div className="container mx-auto px-8 md:px-16">
+          <div className="uppercase text-xs tracking-[0.2em] text-[#B8B8C0]/50 mb-6">
+            INDUSTRIES WE SERVE
+          </div>
+        </div>
+        
+        <div className="marquee-track">
+          {duplicatedIndustries.map((ind, i) => (
+            <div key={i} className="px-8 py-3 border border-[#1A1A1F] text-[#B8B8C0]/70 text-sm whitespace-nowrap mx-2">
+              {ind}
+            </div>
+          ))}
+        </div>
+      </div>
+
     </section>
   );
 }

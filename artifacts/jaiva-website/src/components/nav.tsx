@@ -24,9 +24,9 @@ export function Nav() {
       className={`fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-8 md:px-16 border-b border-[#1A1A1F] transition-colors duration-300 ${
         isScrolled ? "bg-[#09090B]/95 backdrop-blur-sm" : "bg-transparent"
       }`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.4 }}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
     >
       <a href="#" className="flex items-center gap-1">
         <span className="text-xl font-bold font-display text-white">JAIVA</span>
@@ -46,12 +46,14 @@ export function Nav() {
       </nav>
 
       <div className="flex items-center">
-        <a 
+        <motion.a 
           href="#contact"
-          className="bg-[#0DCCF2] text-[#09090B] text-sm font-semibold tracking-wide px-5 py-2 rounded-none hover:bg-[#09B8DB] transition-colors inline-block"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          className="bg-[#0DCCF2] text-[#09090B] text-sm font-semibold tracking-wide px-5 py-2 rounded-none inline-block"
         >
           Get Free Consultation
-        </a>
+        </motion.a>
       </div>
     </motion.header>
   );

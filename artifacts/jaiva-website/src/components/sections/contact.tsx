@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Mail, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -44,50 +44,62 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 bg-[#09090B] grid-bg">
-      <div className="container mx-auto px-8 md:px-16">
+    <section id="contact" className="py-32 md:py-40 bg-[#0D0D10] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_100%,rgba(13,204,242,0.06),transparent)] pointer-events-none z-0"></div>
+      
+      <div className="container mx-auto px-8 md:px-16 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          className="text-center"
         >
           <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block mb-4">
             CONTACT
           </span>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-white">
-            Let's Automate Your Business
+            Let's Automate <br className="hidden sm:block"/>
+            <span className="text-[#0DCCF2]">Your Business</span>
           </h2>
+          <p className="text-[#B8B8C0] max-w-xl mx-auto mt-4">
+            Ready to transform your operations? Get in touch with our automation experts to discuss your specific requirements.
+          </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-16 mt-16">
+        <div className="grid lg:grid-cols-5 gap-16 items-start mt-16">
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="lg:col-span-2 space-y-12"
+            className="lg:col-span-2 glass-card p-8 rounded-sm"
           >
-            <div>
-              <p className="text-[#B8B8C0] text-sm mb-1 uppercase tracking-wide">Email</p>
-              <a href="mailto:jaivacreativelabs@gmail.com" className="text-[#0DCCF2] hover:underline font-medium block text-lg">
-                jaivacreativelabs@gmail.com
-              </a>
-            </div>
+            <h3 className="text-white font-semibold font-display text-xl mb-8">Get In Touch</h3>
             
-            <div>
-              <p className="text-[#B8B8C0] text-sm mb-1 uppercase tracking-wide">Phone</p>
-              <a href="tel:+918940506900" className="text-white font-medium block text-lg">
-                +91 8940506900
-              </a>
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <Mail className="w-5 h-5 text-[#0DCCF2]" />
+                <a href="mailto:jaivacreativelabs@gmail.com" className="text-[#0DCCF2] hover:underline font-medium text-base">
+                  jaivacreativelabs@gmail.com
+                </a>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-white" />
+                <a href="tel:+918940506900" className="text-white font-medium text-base hover:text-[#0DCCF2] transition-colors">
+                  +91 8940506900
+                </a>
+              </div>
             </div>
 
-            <div>
-              <h3 className="text-lg font-bold text-white mb-6 font-display">Services Offered</h3>
-              <ul className="space-y-4">
+            <div className="mt-12">
+              <h4 className="text-[#B8B8C0]/60 text-xs uppercase tracking-widest mb-4 font-semibold">Services</h4>
+              <ul className="space-y-3">
                 {offeredServices.map((service, idx) => (
                   <li key={idx} className="flex items-center gap-3">
-                    <ArrowRight className="w-4 h-4 text-[#0DCCF2] shrink-0" />
+                    <ArrowRight className="w-3 h-3 text-[#0DCCF2]/60 shrink-0" />
                     <span className="text-[#B8B8C0] text-sm">{service}</span>
                   </li>
                 ))}
@@ -100,10 +112,14 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 glass-card p-8 rounded-sm"
           >
             {isSuccess ? (
-              <div className="flex flex-col items-center justify-center text-center p-12 border border-[#1A1A1F] bg-[#0D0D10] rounded-sm h-full min-h-[400px]">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center text-center py-16 h-full min-h-[400px]"
+              >
                 <CheckCircle2 className="w-16 h-16 text-[#0DCCF2] mb-6" />
                 <h3 className="text-2xl font-bold text-white font-display mb-2">Message Sent</h3>
                 <p className="text-[#B8B8C0]">Our automation experts will get back to you shortly.</p>
@@ -116,7 +132,7 @@ export function Contact() {
                 >
                   Send another message
                 </button>
-              </div>
+              </motion.div>
             ) : (
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -124,7 +140,7 @@ export function Contact() {
                     <input 
                       {...form.register("name")} 
                       placeholder="Name" 
-                      className="bg-[#0D0D10] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/40 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
+                      className="bg-[#09090B] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/30 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
                     />
                     {form.formState.errors.name && <p className="text-red-500 text-xs mt-1">{form.formState.errors.name.message}</p>}
                   </div>
@@ -132,7 +148,7 @@ export function Contact() {
                     <input 
                       {...form.register("company")} 
                       placeholder="Company Name" 
-                      className="bg-[#0D0D10] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/40 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
+                      className="bg-[#09090B] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/30 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
                     />
                     {form.formState.errors.company && <p className="text-red-500 text-xs mt-1">{form.formState.errors.company.message}</p>}
                   </div>
@@ -144,7 +160,7 @@ export function Contact() {
                       {...form.register("email")} 
                       type="email"
                       placeholder="Email Address" 
-                      className="bg-[#0D0D10] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/40 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
+                      className="bg-[#09090B] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/30 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
                     />
                     {form.formState.errors.email && <p className="text-red-500 text-xs mt-1">{form.formState.errors.email.message}</p>}
                   </div>
@@ -153,7 +169,7 @@ export function Contact() {
                       {...form.register("phone")} 
                       type="tel"
                       placeholder="Phone Number" 
-                      className="bg-[#0D0D10] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/40 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
+                      className="bg-[#09090B] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/30 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors"
                     />
                     {form.formState.errors.phone && <p className="text-red-500 text-xs mt-1">{form.formState.errors.phone.message}</p>}
                   </div>
@@ -162,7 +178,7 @@ export function Contact() {
                 <div>
                   <select 
                     {...form.register("industry")} 
-                    className="bg-[#0D0D10] border border-[#1A1A1F] text-white px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full appearance-none transition-colors"
+                    className="bg-[#09090B] border border-[#1A1A1F] text-white px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full appearance-none transition-colors"
                   >
                     <option value="" disabled className="text-[#B8B8C0]/40">Select an industry</option>
                     <option value="Manufacturing">Manufacturing</option>
@@ -178,7 +194,7 @@ export function Contact() {
                 <div>
                   <select 
                     {...form.register("services")} 
-                    className="bg-[#0D0D10] border border-[#1A1A1F] text-white px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full appearance-none transition-colors"
+                    className="bg-[#09090B] border border-[#1A1A1F] text-white px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full appearance-none transition-colors"
                   >
                     <option value="" disabled className="text-[#B8B8C0]/40">Select a service</option>
                     <option value="Consulting">Workflow Automation Consulting</option>
@@ -195,17 +211,19 @@ export function Contact() {
                   <textarea 
                     {...form.register("requirements")} 
                     placeholder="Project Requirements" 
-                    className="bg-[#0D0D10] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/40 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full min-h-[120px] resize-y transition-colors"
+                    className="bg-[#09090B] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/30 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full min-h-[120px] resize-none transition-colors"
                   />
                   {form.formState.errors.requirements && <p className="text-red-500 text-xs mt-1">{form.formState.errors.requirements.message}</p>}
                 </div>
 
-                <button 
+                <motion.button 
                   type="submit" 
-                  className="bg-[#0DCCF2] text-[#09090B] font-semibold tracking-wide px-8 py-3 rounded-none hover:bg-[#09B8DB] transition-colors w-full mt-2"
+                  whileHover={{ scale: 1.01 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-[#0DCCF2] text-[#09090B] font-semibold tracking-wide py-4 rounded-none text-sm w-full mt-2 transition-colors"
                 >
-                  Book Consultation
-                </button>
+                  Book Free Consultation &rarr;
+                </motion.button>
               </form>
             )}
           </motion.div>

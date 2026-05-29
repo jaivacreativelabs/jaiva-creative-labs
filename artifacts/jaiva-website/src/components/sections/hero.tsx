@@ -1,53 +1,84 @@
 import { motion } from "framer-motion";
+import { NeuralBackground } from "@/components/neural-background";
 
 export function Hero() {
-  const tags = [
-    "Workflow Automation Consulting",
-    "AI-Powered Business Automation",
-    "Custom Automation Templates",
-    "CRM & ERP Integrations",
-    "AI Chatbots & Agents",
-    "No-Code Automation",
-    "Process Digitization"
-  ];
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 0.8, 
+        ease: [0.25, 0.46, 0.45, 0.94] 
+      } 
+    }
+  };
 
   return (
-    <motion.section 
-      initial={{ opacity: 0, y: 20 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="relative w-full min-h-screen flex items-center bg-[#09090B] grid-bg"
-    >
-      <div className="container mx-auto px-8 md:px-16 pt-24 pb-16 max-w-3xl ml-0">
-        <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block">
-          WORKFLOW AUTOMATION & AI CONSULTING
-        </span>
-        
-        <h1 className="mt-6 text-5xl md:text-7xl font-bold font-display leading-[1.1] text-white">
-          Transform Your Business <span className="text-white">with</span> <span className="text-[#0DCCF2]">Intelligent Workflow</span> <span className="text-white">Automation</span>
-        </h1>
-        
-        <p className="mt-6 max-w-xl text-[#B8B8C0] text-lg leading-relaxed">
-          We help businesses automate operations, customer engagement, approvals, reporting, AI-driven workflows, and repetitive processes using advanced automation platforms and AI technologies. From startups to enterprises, we design scalable automation systems that save time, reduce costs, and improve efficiency across every industry.
-        </p>
-        
-        <div className="mt-10 flex items-center gap-4">
-          <a href="#contact" className="bg-[#0DCCF2] text-[#09090B] font-semibold tracking-wide px-8 py-3 rounded-none hover:bg-[#09B8DB] transition-colors inline-block">
-            Get Free Consultation
-          </a>
-          <a href="#contact" className="border border-[#1A1A1F] text-white font-medium tracking-wide px-8 py-3 rounded-none hover:border-[#0DCCF2]/40 transition-colors inline-block">
-            Book Demo
-          </a>
-        </div>
-        
-        <div className="mt-12 flex flex-wrap gap-3">
-          {tags.map((tag, index) => (
-            <span key={index} className="border border-[#1A1A1F] text-[#B8B8C0] text-xs tracking-wide px-4 py-2 rounded-none">
-              {tag}
+    <section className="relative min-h-screen bg-[#09090B] overflow-hidden flex items-center">
+      <NeuralBackground />
+      <div className="relative z-10 container mx-auto px-8 md:px-16 pt-28 pb-20">
+        <motion.div variants={container} initial="hidden" animate="visible">
+          
+          <motion.div variants={item} className="flex items-center gap-4">
+            <div className="w-8 h-px bg-[#0DCCF2]/60"></div>
+            <span className="text-xs tracking-[0.3em] uppercase text-[#0DCCF2]/80 font-medium">
+              AI & WORKFLOW AUTOMATION COMPANY
             </span>
-          ))}
-        </div>
+          </motion.div>
+
+          <motion.h1 variants={item} className="mt-8 text-6xl md:text-8xl font-bold font-display leading-[0.95] tracking-tight">
+            <div className="text-white">Building</div>
+            <div className="animated-gradient-text">Intelligent</div>
+            <div className="text-white">Systems</div>
+            <div className="text-[#B8B8C0]/60 text-4xl md:text-5xl font-normal mt-4">For The Future.</div>
+          </motion.h1>
+
+          <motion.p variants={item} className="mt-8 max-w-lg text-[#B8B8C0] text-base md:text-lg leading-relaxed">
+            We design intelligent automation systems that eliminate manual work, accelerate operations, and scale with your business — from AI agents to enterprise workflow orchestration.
+          </motion.p>
+
+          <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
+            <motion.a 
+              href="#contact" 
+              className="relative overflow-hidden bg-[#0DCCF2] text-[#09090B] font-semibold tracking-wide px-8 py-4 rounded-none inline-block group"
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
+            >
+              <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+              <span className="relative z-10">Book Free Consultation</span>
+            </motion.a>
+            <a href="#services" className="text-[#B8B8C0] text-sm font-medium underline underline-offset-4 hover:text-[#0DCCF2] transition-colors">
+              Start Your Automation Journey &rarr;
+            </a>
+          </motion.div>
+
+          <motion.div variants={item} className="mt-16 flex flex-wrap gap-12 border-t border-[#1A1A1F] pt-8">
+            <div>
+              <div className="text-white font-bold text-2xl">50+</div>
+              <div className="text-[#B8B8C0] text-xs tracking-wide uppercase mt-1">Automations Deployed</div>
+            </div>
+            <div>
+              <div className="text-white font-bold text-2xl">3x</div>
+              <div className="text-[#B8B8C0] text-xs tracking-wide uppercase mt-1">Average Efficiency Gain</div>
+            </div>
+            <div>
+              <div className="text-white font-bold text-2xl">48hr</div>
+              <div className="text-[#B8B8C0] text-xs tracking-wide uppercase mt-1">Fast Deployment</div>
+            </div>
+          </motion.div>
+
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }

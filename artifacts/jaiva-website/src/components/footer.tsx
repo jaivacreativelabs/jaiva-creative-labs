@@ -1,7 +1,8 @@
 export function Footer() {
   return (
-    <footer className="bg-[#09090B] border-t border-[#1A1A1F] py-16 px-8 md:px-16">
-      <div className="container mx-auto">
+    <footer className="bg-[#09090B] border-t border-[#1A1A1F] py-16 px-8 md:px-16 relative">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-[#0DCCF2]/20"></div>
+      <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="flex flex-col items-start">
             <a href="#" className="flex items-center gap-1">
@@ -40,7 +41,7 @@ export function Footer() {
               <a href="mailto:jaivacreativelabs@gmail.com" className="text-[#0DCCF2] text-sm hover:underline">
                 jaivacreativelabs@gmail.com
               </a>
-              <a href="tel:+918940506900" className="text-white text-sm">
+              <a href="tel:+918940506900" className="text-white text-sm hover:text-[#0DCCF2] transition-colors">
                 +91 8940506900
               </a>
             </div>

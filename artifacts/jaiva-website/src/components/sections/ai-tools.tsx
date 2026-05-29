@@ -11,47 +11,48 @@ export function AITools() {
     { icon: Zap, name: "Make.com" },
     { icon: Cloud, name: "Microsoft Power Automate" },
     { icon: SiGooglecloud, name: "Google Cloud AI" },
-    { icon: SiAirtable, name: "Airtable Automation" },
-    { icon: SiSlack, name: "Slack Automation" },
-    { icon: MessageSquare, name: "Teams Automation" },
+    { icon: SiAirtable, name: "Airtable" },
+    { icon: SiSlack, name: "Slack" },
+    { icon: MessageSquare, name: "Microsoft Teams" },
     { icon: SiWhatsapp, name: "WhatsApp Business API" }
   ];
 
   return (
-    <section id="ai-tools" className="py-32 bg-[#09090B]">
+    <section id="ai-tools" className="py-32 md:py-40 bg-[#09090B] overflow-hidden">
       <div className="container mx-auto px-8 md:px-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center"
-        >
+        
+        <div className="text-center">
           <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block mb-4">
-            PLATFORMS & TOOLS
+            TECHNOLOGY
           </span>
           <h2 className="text-3xl md:text-5xl font-bold font-display text-white">
-            Advanced AI & Automation Platforms We Use
+            The Stack Behind Every Automation
           </h2>
-        </motion.div>
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto mt-16">
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto relative z-10">
           {tools.map((tool, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.05 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
               key={index} 
-              className="group border border-[#1A1A1F] px-8 py-5 flex flex-col items-center gap-3 rounded-sm bg-[#0D0D10] hover:border-[#0DCCF2]/30 transition-all min-w-[140px]"
+              className="group glass-card p-6 flex flex-col items-center gap-3 hover:glow-border transition-all duration-300 cursor-default"
             >
-              <tool.icon className="w-7 h-7 text-[#B8B8C0]/60 group-hover:text-[#0DCCF2] transition-colors" />
-              <span className="text-xs text-[#B8B8C0]/60 tracking-wide group-hover:text-[#B8B8C0] transition-colors font-medium text-center">
+              <tool.icon className="w-8 h-8 text-[#B8B8C0]/50 group-hover:text-[#0DCCF2] transition-colors duration-300" />
+              <span className="text-xs text-[#B8B8C0]/60 group-hover:text-[#B8B8C0] tracking-wide transition-colors text-center">
                 {tool.name}
               </span>
             </motion.div>
           ))}
         </div>
+        
+        <div className="mt-16 relative flex items-center justify-center max-w-sm mx-auto">
+          <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1A1A1F] to-transparent"></div>
+          <span className="bg-[#09090B] px-4 text-[#B8B8C0]/30 text-xs tracking-widest relative z-10">AND MORE</span>
+        </div>
+
       </div>
     </section>
   );

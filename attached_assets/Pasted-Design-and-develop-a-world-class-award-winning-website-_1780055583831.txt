@@ -1,0 +1,246 @@
+Design and develop a world-class, award-winning website for JAIVA Creative Labs inspired by the innovation, premium aesthetics, smooth interactions, and futuristic storytelling style of Fynza.
+
+This should NOT look like a traditional corporate website.
+
+The experience should feel like a next-generation AI company, combining cinematic visuals, immersive animations, futuristic layouts, premium typography, and high-end product storytelling.
+
+Build using Next.js, TypeScript, Tailwind CSS, Framer Motion, GSAP, and modern animation techniques.
+
+Brand Information
+
+Company Name:
+JAIVA Creative Labs
+
+Clients:
+
+* Hexpertify
+* Askabhi Technologies
+
+Contact:
+[jaivacreativelabs@gmail.com](mailto:jaivacreativelabs@gmail.com)
++91 8940506900
+
+Color System
+
+Primary Accent:
+#0DCCF2
+
+Dark Background:
+#09090B
+
+White:
+#FFFFFF
+
+Secondary Text:
+#B8B8C0
+
+Borders:
+#1A1A1F
+
+Design Direction
+
+Create a highly innovative visual experience.
+
+The website should feel like a fusion of:
+
+* AI laboratory
+* Futuristic technology company
+* Premium startup
+* Creative innovation studio
+* Next-generation automation company
+
+Avoid:
+
+* Generic agency templates
+* Basic SaaS landing pages
+* Traditional business layouts
+* Large blocks of boring text
+
+Visual Style
+
+* Massive typography
+* Full-screen sections
+* Floating glassmorphism panels
+* Dynamic gradients
+* Animated grid backgrounds
+* Mouse-reactive effects
+* Glow effects
+* Parallax movement
+* Scroll-triggered storytelling
+* Premium card layouts
+* Interactive transitions
+* 3D depth illusion
+* Smooth page reveals
+* Elegant motion design
+
+Hero Section
+
+Create an unforgettable first impression.
+
+Large headline:
+
+"Building Intelligent Systems For The Future"
+
+The words:
+"Intelligent Systems"
+should glow using the primary cyan color.
+
+Background should include:
+
+* Animated AI grid
+* Floating particles
+* Dynamic lighting
+* Subtle neural-network inspired patterns
+* Moving gradient effects
+
+Add smooth entrance animations.
+
+Hero should feel alive.
+
+CTA Buttons:
+
+* Book Free Consultation
+* Start Your Automation Journey
+
+Trusted By Section
+
+Display:
+
+* Hexpertify
+* Askabhi Technologies
+
+Use premium animated logo cards.
+
+Interactive Storytelling Section
+
+Instead of standard content blocks:
+
+Create scroll-driven storytelling.
+
+As users scroll:
+
+* Cards animate into view
+* Text reveals progressively
+* Background elements move subtly
+* Visual hierarchy changes dynamically
+
+The website should feel like a presentation experience.
+
+Services Section
+
+Present services as futuristic floating modules.
+
+Services:
+
+* Workflow Automation Consulting
+* AI-Powered Business Automation
+* Custom Automation Templates
+* CRM & ERP Integrations
+* AI Chatbots & Agents
+* Process Digitization
+* Business Intelligence Automation
+
+Each service card should:
+
+* Glow on hover
+* Expand smoothly
+* Include animated icons
+* Use glassmorphism effects
+
+Technology Stack Section
+
+Create an orbit-style visual system.
+
+Display:
+
+* Claude AI
+* OpenAI GPT
+* N8N
+* Zapier
+* Make.com
+* Airtable
+* Microsoft Power Automate
+* WhatsApp API
+
+Animate platform logos in a connected network visualization.
+
+Why Choose Us Section
+
+Create a futuristic timeline experience.
+
+Show:
+
+* AI-First Approach
+* Industry-Specific Automation
+* Scalable Architecture
+* Fast Deployment
+* End-to-End Consulting
+* Cost-Effective Solutions
+
+Use animated progress lines and visual storytelling.
+
+Contact Section
+
+Create a premium conversion-focused section.
+
+Dark futuristic panel.
+
+Large heading:
+
+"Let's Automate Your Business"
+
+Include:
+
+* Email
+* Phone Number
+* Contact Form
+
+Form should have:
+
+* Smooth focus animations
+* Floating labels
+* Premium interaction states
+
+Technical Requirements
+
+* Next.js latest version
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* GSAP
+* Lenis Smooth Scroll
+* Fully responsive
+* SEO optimized
+* GEO optimized
+* Server Side Rendering
+* Static Site Generation
+* Dynamic metadata
+* Schema Markup
+* Sitemap.xml
+* Robots.txt
+* Open Graph tags
+* Twitter Cards
+* Core Web Vitals optimized
+
+Animation Requirements
+
+* Page reveal animation
+* Scroll-triggered section reveals
+* Text stagger animations
+* Mouse interaction effects
+* Floating elements
+* Gradient motion
+* Smooth transitions
+* Magnetic buttons
+* Hover physics
+* Premium loading screen
+
+Final Goal
+
+The final website should feel like it belongs among the world's top AI startups and creative technology companies.
+
+When someone lands on the website, the immediate reaction should be:
+
+"This company feels innovative, premium, futuristic, and highly capable."
+
+The design should prioritize emotional impact, visual sophistication, trust, and modern AI-company aesthetics over traditional corporate layouts.
