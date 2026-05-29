@@ -1,0 +1,368 @@
+Build a premium, modern, dark-themed, SEO-optimized website for JAIVA Creative Labs using Next.js (latest stable version). The website should position JAIVA Creative Labs as a leading Workflow Automation and AI Automation consulting company. The design should be highly professional, futuristic, conversion-focused, mobile responsive, and optimized for both traditional search engines and AI-powered search experiences.
+
+Company Information
+
+Company Name: JAIVA Creative Labs
+
+Clients:
+
+* Hexpertify
+* Askabhi Technologies
+
+Contact Information:
+
+* Email: [jaivacreativelabs@gmail.com](mailto:jaivacreativelabs@gmail.com)
+* Phone: +91 8940506900
+
+Brand Colors
+
+Primary Color (Cyan / Accent)
+HEX: #0DCCF2
+RGB: 13, 204, 242
+
+Use for:
+
+* "Intelligent Automation" text
+* CTA buttons
+* Logo accents
+* Highlight labels
+* Icons
+* Interactive elements
+
+Secondary Color (Dark Background)
+HEX: #09090B
+RGB: 9, 9, 11
+
+Use for:
+
+* Main hero background
+* Section backgrounds
+* Footer
+
+Supporting Colors
+
+* White Text: #FFFFFF
+* Light Gray Text: #B8B8C0
+* Grid / Border Lines: #1A1A1F
+
+Design Requirements
+
+* Modern SaaS-style design
+* Premium dark theme
+* Futuristic AI-inspired aesthetics
+* Clean typography
+* Glassmorphism cards
+* Subtle animations and transitions
+* Grid-based layouts
+* Professional illustrations/icons
+* Fully responsive design
+* Conversion-focused UI/UX
+* High accessibility standards
+
+Technical Requirements
+
+* Build using Next.js (latest stable version)
+* Use TypeScript
+* Use modern scalable folder architecture
+* SEO-first development approach
+* Fast loading performance
+* Excellent Core Web Vitals
+* Mobile-first design
+* Use semantic HTML structure
+* Optimized image loading
+* Lazy loading where appropriate
+* Dynamic metadata support
+* Structured schema markup
+* Sitemap.xml generation
+* Robots.txt generation
+* Open Graph tags
+* Twitter Card tags
+* SEO-friendly URLs
+* Easy future expansion for blog pages, landing pages, service pages, and case studies
+* Implement GEO (Generative Engine Optimization) best practices for AI search engines
+* Content structure should be easily crawlable by search engines and AI assistants
+* Support Server Side Rendering (SSR) and Static Site Generation (SSG) where appropriate
+
+Home Page
+
+Hero Section
+
+Headline:
+Transform Your Business with Intelligent Workflow Automation
+
+Description:
+We help businesses automate operations, customer engagement, approvals, reporting, AI-driven workflows, and repetitive processes using advanced automation platforms and AI technologies.
+
+From startups to enterprises, we design scalable automation systems that save time, reduce costs, and improve efficiency across every industry.
+
+Our Expertise
+
+* Workflow Automation Consulting
+* AI-Powered Business Automation
+* Custom Automation Templates
+* CRM & ERP Integrations
+* AI Chatbots & Agents
+* No-Code & Low-Code Automation
+* Process Digitization
+* Business Intelligence Automation
+
+Platforms & Technologies We Use
+
+* Claude AI
+* N8N
+* OpenAI GPT
+* Zapier
+* Make.com
+* Google Cloud AI
+* Microsoft Power Automate
+* Airtable
+* Slack Automation
+* WhatsApp API
+* HubSpot
+* Salesforce
+* Notion AI
+
+Hero CTA Buttons
+
+Primary:
+Get Free Consultation
+
+Secondary:
+Book Demo
+
+Additional CTA:
+Start Your Automation Journey
+
+About Us
+
+Headline:
+Empowering Businesses Through Automation & AI
+
+Content:
+We are a team of Workflow Automation Consultants specializing in building intelligent automation systems for businesses across industries. Our mission is to simplify complex operations using AI, automation platforms, and smart integrations.
+
+From customer support automation to enterprise workflow orchestration, we help organizations eliminate manual work and accelerate digital transformation.
+
+Our expertise spans:
+
+* AI workflow architecture
+* Custom automation template creation
+* Intelligent business process automation
+* AI chatbot deployment
+* Enterprise integration systems
+* Data-driven workflow optimization
+
+Industries We Serve
+
+* Manufacturing
+* Healthcare
+* Education
+* Retail & E-commerce
+* Logistics
+* Real Estate
+* Finance
+* Waste Management & Circular Economy
+* Startups & SaaS Companies
+
+Why Choose Us
+
+* Industry-specific automation solutions
+* Custom-built workflows
+* Fast deployment
+* Scalable architecture
+* AI-first approach
+* Cost-effective automation
+* End-to-end consulting & support
+
+Clients Section
+
+Featured Clients
+
+* Hexpertify
+* Askabhi Technologies
+
+Display as premium logo cards with modern styling.
+
+Services Section
+
+1. Workflow Automation Consulting
+
+We analyze your business operations and identify opportunities to automate repetitive tasks, approvals, communication systems, reporting, and customer workflows.
+
+Services Include:
+
+* Business Process Mapping
+* Automation Strategy
+* Workflow Design
+* System Integration
+* Automation Audits
+* AI Workflow Consulting
+
+2. AI-Powered Business Automation
+
+Deploy AI agents and intelligent systems that automate customer interactions, document processing, lead qualification, and operational workflows.
+
+Solutions:
+
+* AI Chatbots
+* AI Voice Assistants
+* AI Email Automation
+* AI Data Extraction
+* AI Knowledge Base Systems
+* AI Decision Workflows
+
+3. Custom Workflow Template Creation
+
+We create reusable workflow templates tailored for your business operations and industry requirements.
+
+Template Categories:
+
+* HR Automation Templates
+* CRM Automation
+* Lead Management Systems
+* Invoice & Finance Automation
+* Customer Support Workflows
+* Sales Funnel Automation
+* Procurement Approval Systems
+* Inventory Automation
+
+4. Website & App Automation Integration
+
+Integrate your website, applications, and third-party tools into a seamless automated ecosystem.
+
+Integrations:
+
+* Website Forms to CRM
+* WhatsApp Automation
+* Payment Gateway Automation
+* Email Marketing Automation
+* API Integrations
+* Cloud Database Connectivity
+
+5. Enterprise Process Automation
+
+Scale enterprise operations with secure and reliable automation architecture.
+
+Enterprise Solutions:
+
+* ERP Integration
+* Multi-Department Workflows
+* Approval Automation
+* Internal Ticketing Systems
+* Dashboard & Analytics Automation
+* Cloud Infrastructure Automation
+
+6. Industry-Specific Automation Solutions
+
+Manufacturing
+
+* Production Tracking
+* Inventory Automation
+* Vendor Management
+
+Healthcare
+
+* Appointment Automation
+* Patient Communication Systems
+* Digital Records Workflow
+
+Education
+
+* Student Enrollment Automation
+* Attendance & Notification Systems
+* AI Learning Workflows
+
+E-Commerce
+
+* Order Processing
+* Customer Engagement Automation
+* Inventory Sync Automation
+
+AI Tools Section
+
+Headline:
+Advanced AI & Automation Platforms We Use
+
+Platforms:
+
+* Claude AI
+* N8N
+* OpenAI GPT
+* Zapier
+* Make.com
+* Microsoft Power Automate
+* Google Cloud AI
+* Airtable Automation
+* Slack & Teams Automation
+* WhatsApp Business API
+
+Contact Section
+
+Headline:
+Let's Automate Your Business
+
+Description:
+Ready to streamline your operations with AI and workflow automation?
+
+Our experts can help you design, develop, and deploy intelligent automation systems tailored to your business needs.
+
+Contact Information
+
+Email:
+[jaivacreativelabs@gmail.com](mailto:jaivacreativelabs@gmail.com)
+
+Phone:
++91 8940506900
+
+Services Offered
+
+* Business Automation Consultation
+* Workflow Audit & Strategy
+* AI Integration Support
+* Enterprise Automation Deployment
+
+Contact Form Fields
+
+* Name
+* Company Name
+* Email Address
+* Phone Number
+* Industry
+* Services Interested In
+* Project Requirements
+
+CTA Button
+
+Book a Free Automation Consultation Today
+
+SEO Keywords
+
+Primary Keywords
+
+* Workflow Automation Consultants
+* AI Workflow Automation
+* Business Process Automation
+* N8N Automation Experts
+* Claude AI Automation
+* AI Automation Services
+* Workflow Automation Company
+* Automation Consulting Services
+* AI Integration Services
+* Custom Workflow Templates
+
+Secondary Keywords
+
+* No-Code Automation Agency
+* AI Business Automation
+* Enterprise Workflow Solutions
+* AI Chatbot Development
+* Process Automation Experts
+* Intelligent Workflow Systems
+* CRM Automation Services
+* Automation Template Creation
+* Digital Transformation Consulting
+* AI Operations Automation
+
+Final Goal
+
+Create a premium, high-converting, enterprise-grade website that positions JAIVA Creative Labs as a trusted AI and Workflow Automation consulting company. The website should feel modern, intelligent, and credible while being highly optimized for SEO, GEO, lead generation, and long-term organic growth.
