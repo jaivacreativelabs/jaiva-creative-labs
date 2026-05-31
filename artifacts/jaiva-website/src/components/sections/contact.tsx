@@ -7,7 +7,6 @@ import { useState, useEffect, useRef } from "react";
 
 const PHRASES = [
   "Automate Your Business",
-  "Maximize Your Revenue",
   "Reduce Manual Work",
   "Reduce Operational Costs",
 ];
