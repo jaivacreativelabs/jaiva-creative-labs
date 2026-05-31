@@ -26,9 +26,7 @@ export function AITools() {
             <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block mb-3 sm:mb-4">
               TECHNOLOGY
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display text-white">
-              The Stack Behind Every Automation
-            </h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display text-white">Stack Behind Every Automation</h2>
           </div>
 
           <div className="mt-12 sm:mt-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 relative z-10">
