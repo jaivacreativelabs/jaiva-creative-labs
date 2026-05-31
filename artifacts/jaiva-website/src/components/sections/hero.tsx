@@ -40,7 +40,7 @@ export function Hero() {
             <div className="text-white">We Automate</div>
             <div className="animated-gradient-text">the Future</div>
             <div className="text-white">Together</div>
-            <div className="text-[#B8B8C0]/60 text-3xl sm:text-4xl md:text-5xl font-normal mt-3 sm:mt-4">For You</div>
+            <div className="text-[#B8B8C0]/60 text-3xl sm:text-4xl md:text-5xl font-normal mt-3 sm:mt-4">For Your Business</div>
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 sm:mt-8 max-w-lg text-[#B8B8C0] text-sm sm:text-base md:text-lg leading-relaxed">
