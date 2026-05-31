@@ -11,7 +11,6 @@ export function Clients() {
     { title: "AI-First Approach", desc: "Leveraging the latest artificial intelligence models to build systems that learn, adapt, and improve." },
     { title: "Industry-Specific Automation", desc: "Tailored solutions built with deep domain expertise for your specific sector's unique challenges." },
     { title: "Scalable Architecture", desc: "Infrastructure designed to handle your growth without requiring complete rebuilds." },
-    { title: "Fast Deployment (48hr avg)", desc: "Rapid prototyping and implementation to deliver value and ROI faster." },
     { title: "End-to-End Consulting", desc: "From initial process mapping to deployment, training, and ongoing maintenance." },
     { title: "Cost-Effective Solutions", desc: "Automation that pays for itself through massive efficiency gains and time savings." }
   ];
