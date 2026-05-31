@@ -37,10 +37,10 @@ export function Hero() {
           </motion.div>
 
           <motion.h1 variants={item} className="mt-8 text-6xl md:text-8xl font-bold font-display leading-[0.95] tracking-tight">
-            <div className="text-white">Building</div>
-            <div className="animated-gradient-text">Intelligent</div>
-            <div className="text-white">Systems</div>
-            <div className="text-[#B8B8C0]/60 text-4xl md:text-5xl font-normal mt-4">For The Future.</div>
+            <div className="text-white">We Automate </div>
+            <div className="animated-gradient-text">the Future</div>
+            <div className="text-white">Together</div>
+            <div className="text-[#B8B8C0]/60 text-4xl md:text-5xl font-normal mt-4">For You</div>
           </motion.h1>
 
           <motion.p variants={item} className="mt-8 max-w-lg text-[#B8B8C0] text-base md:text-lg leading-relaxed">
