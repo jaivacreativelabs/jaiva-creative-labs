@@ -62,18 +62,22 @@ export function Hero() {
             </a>
           </motion.div>
 
-          <motion.div variants={item} className="mt-12 sm:mt-16 flex flex-wrap gap-6 sm:gap-12 border-t border-[#1A1A1F] pt-6 sm:pt-8">
+          <motion.div variants={item} className="mt-12 sm:mt-16 grid grid-cols-2 sm:flex sm:flex-wrap gap-6 sm:gap-10 border-t border-[#1A1A1F] pt-6 sm:pt-8">
             <div>
-              <div className="text-white font-bold text-xl sm:text-2xl">50+</div>
-              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Automations Deployed</div>
+              <div className="text-white font-bold text-xl sm:text-2xl">24/7</div>
+              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Automated Operations</div>
             </div>
             <div>
-              <div className="text-white font-bold text-xl sm:text-2xl">3x</div>
-              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Average Efficiency Gain</div>
+              <div className="text-white font-bold text-xl sm:text-2xl">50%</div>
+              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Reduction in Manual Work</div>
             </div>
             <div>
-              <div className="text-white font-bold text-xl sm:text-2xl">48hr</div>
-              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Fast Deployment</div>
+              <div className="text-white font-bold text-xl sm:text-2xl">3X</div>
+              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Faster Process Execution</div>
+            </div>
+            <div>
+              <div className="text-white font-bold text-xl sm:text-2xl">40%</div>
+              <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Operating Cost Reduction</div>
             </div>
           </motion.div>
 
