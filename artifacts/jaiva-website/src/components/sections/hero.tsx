@@ -44,7 +44,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="mt-8 max-w-lg text-[#B8B8C0] text-base md:text-lg leading-relaxed">
-            We design intelligent automation systems that eliminate manual work, accelerate operations, and scale with your business — from AI agents to enterprise workflow orchestration.
+            We design intelligent automation systems that eliminate manual work, cut operational costs, accelerate growth, maximize revenue, and scale with your business — from AI agents to enterprise workflow orchestration.
           </motion.p>
 
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
