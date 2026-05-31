@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 
 export function Clients() {
-  const clients = ["Hexpertify", "Askabhi Technologies"];
+  const clients = [
+    { name: "Hexpertify", tag: "Automated Lead Generation & Brand Mentions" },
+    { name: "Askabhi Technologies", tag: "Automated HR Process" },
+    { name: "Voogun", tag: "Workflow Automation" },
+  ];
 
   const reasons = [
     { title: "AI-First Approach", desc: "Leveraging the latest artificial intelligence models to build systems that learn, adapt, and improve." },
@@ -29,7 +33,7 @@ export function Clients() {
               </span>
             </motion.div>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full flex-wrap">
               {clients.map((client, index) => (
                 <motion.div
                   key={index}
@@ -37,10 +41,10 @@ export function Clients() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="glass-card px-8 sm:px-12 lg:px-16 py-8 sm:py-10 lg:py-12 text-center hover:glow-border hover:pulse-glow transition-all duration-300 w-full sm:min-w-[220px] sm:w-auto"
+                  className="glass-card px-8 sm:px-10 py-8 sm:py-10 text-center hover:glow-border hover:pulse-glow transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]"
                 >
-                  <h3 className="text-lg sm:text-xl font-semibold text-white font-display">{client}</h3>
-                  <p className="text-xs text-[#B8B8C0]/50 tracking-[0.2em] uppercase mt-2 sm:mt-3">CLIENT SINCE 2024</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white font-display">{client.name}</h3>
+                  <p className="text-xs text-[#0DCCF2]/60 tracking-wide mt-2 sm:mt-3">{client.tag}</p>
                 </motion.div>
               ))}
             </div>
