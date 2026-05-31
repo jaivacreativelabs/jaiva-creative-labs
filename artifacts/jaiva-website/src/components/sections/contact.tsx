@@ -6,10 +6,10 @@ import * as z from "zod";
 import { useState, useEffect, useRef } from "react";
 
 const PHRASES = [
-  { prefix: "Let's Automate ", suffix: "Your Business" },
-  { prefix: "Let's Maximize ", suffix: "Your Revenue" },
-  { prefix: "Let's Reduce ", suffix: "Manual Work" },
-  { prefix: "Let's Reduce ", suffix: "Operational Costs" },
+  "Automate Your Business",
+  "Maximize Your Revenue",
+  "Reduce Manual Work",
+  "Reduce Operational Costs",
 ];
 
 const TYPE_SPEED = 70;
@@ -23,7 +23,7 @@ function useTypewriter() {
   const [showCursor, setShowCursor] = useState(true);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const full = PHRASES[phraseIdx].prefix + PHRASES[phraseIdx].suffix;
+  const full = PHRASES[phraseIdx];
 
   useEffect(() => {
     const cursorInterval = setInterval(() => setShowCursor((v) => !v), 530);
@@ -49,11 +49,7 @@ function useTypewriter() {
     return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
   }, [charCount, deleting, full]);
 
-  const prefix = PHRASES[phraseIdx].prefix;
-  const visiblePrefix = full.slice(0, Math.min(charCount, prefix.length));
-  const visibleSuffix = charCount > prefix.length ? full.slice(prefix.length, charCount) : "";
-
-  return { visiblePrefix, visibleSuffix, showCursor };
+  return { visibleText: full.slice(0, charCount), showCursor };
 }
 
 const formSchema = z.object({
@@ -68,7 +64,7 @@ const formSchema = z.object({
 
 export function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
-  const { visiblePrefix, visibleSuffix, showCursor } = useTypewriter();
+  const { visibleText, showCursor } = useTypewriter();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -115,8 +111,8 @@ export function Contact() {
               CONTACT
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display text-white" aria-live="polite">
-              <span>{visiblePrefix}</span>
-              {visibleSuffix && <span className="text-[#0DCCF2]">{visibleSuffix}</span>}
+              <span className="text-white">Let's </span>
+              <span className="text-[#0DCCF2]">{visibleText}</span>
               <span
                 className="text-[#0DCCF2] ml-0.5"
                 style={{ opacity: showCursor ? 1 : 0, transition: "opacity 0.1s" }}
