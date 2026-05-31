@@ -3,7 +3,58 @@ import { CheckCircle2, ArrowRight, Mail, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+
+const PHRASES = [
+  { prefix: "Let's Automate ", suffix: "Your Business" },
+  { prefix: "Let's Maximize ", suffix: "Your Revenue" },
+  { prefix: "Let's Reduce ", suffix: "Manual Work" },
+  { prefix: "Let's Reduce ", suffix: "Operational Costs" },
+];
+
+const TYPE_SPEED = 70;
+const DELETE_SPEED = 40;
+const PAUSE_MS = 2000;
+
+function useTypewriter() {
+  const [phraseIdx, setPhraseIdx] = useState(0);
+  const [charCount, setCharCount] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const full = PHRASES[phraseIdx].prefix + PHRASES[phraseIdx].suffix;
+
+  useEffect(() => {
+    const cursorInterval = setInterval(() => setShowCursor((v) => !v), 530);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  useEffect(() => {
+    const schedule = (fn: () => void, delay: number) => {
+      timeoutRef.current = setTimeout(fn, delay);
+    };
+
+    if (!deleting && charCount < full.length) {
+      schedule(() => setCharCount((c) => c + 1), TYPE_SPEED);
+    } else if (!deleting && charCount === full.length) {
+      schedule(() => setDeleting(true), PAUSE_MS);
+    } else if (deleting && charCount > 0) {
+      schedule(() => setCharCount((c) => c - 1), DELETE_SPEED);
+    } else if (deleting && charCount === 0) {
+      setDeleting(false);
+      setPhraseIdx((i) => (i + 1) % PHRASES.length);
+    }
+
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+  }, [charCount, deleting, full]);
+
+  const prefix = PHRASES[phraseIdx].prefix;
+  const visiblePrefix = full.slice(0, Math.min(charCount, prefix.length));
+  const visibleSuffix = charCount > prefix.length ? full.slice(prefix.length, charCount) : "";
+
+  return { visiblePrefix, visibleSuffix, showCursor };
+}
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -17,6 +68,7 @@ const formSchema = z.object({
 
 export function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
+  const { visiblePrefix, visibleSuffix, showCursor } = useTypewriter();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -62,10 +114,14 @@ export function Contact() {
             <span className="uppercase text-xs tracking-[0.2em] text-[#0DCCF2] font-medium block mb-3 sm:mb-4">
               CONTACT
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display text-white">
-              Let's Automate{" "}
-              <br className="hidden sm:block" />
-              <span className="text-[#0DCCF2]">Your Business</span>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display text-white" aria-live="polite">
+              <span>{visiblePrefix}</span>
+              {visibleSuffix && <span className="text-[#0DCCF2]">{visibleSuffix}</span>}
+              <span
+                className="text-[#0DCCF2] ml-0.5"
+                style={{ opacity: showCursor ? 1 : 0, transition: "opacity 0.1s" }}
+                aria-hidden="true"
+              >|</span>
             </h2>
             <p className="text-[#B8B8C0] max-w-xl mx-auto mt-3 sm:mt-4 text-sm sm:text-base">
               Ready to transform your operations? Get in touch with our automation experts to discuss your specific requirements.
