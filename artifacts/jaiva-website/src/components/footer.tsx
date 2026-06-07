@@ -12,7 +12,7 @@ export function Footer() {
                 <span className="text-xl font-display animated-gradient-text"> Creative Labs</span>
               </a>
               <p className="text-[#B8B8C0] text-sm mt-3 leading-relaxed max-w-xs">
-                Premium AI and Workflow Automation consulting firm helping businesses accelerate digital transformation.
+                Premium AI and Workflow Automation company helping businesses accelerate Revenue and Operations.
               </p>
             </div>
 
