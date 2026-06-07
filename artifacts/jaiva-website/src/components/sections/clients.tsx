@@ -16,7 +16,7 @@ export function Clients() {
   ];
 
   return (
-    <section id="clients" className="py-20 sm:py-32 md:py-40 bg-[#09090B] overflow-hidden">
+    <section id="clients" className="py-14 sm:py-20 md:py-28 bg-[#09090B] overflow-hidden">
       <div className="px-5 sm:px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
 

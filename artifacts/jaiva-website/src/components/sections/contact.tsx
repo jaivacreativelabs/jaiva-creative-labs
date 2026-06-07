@@ -93,7 +93,7 @@ export function Contact() {
   const inputClass = "bg-[#09090B] border border-[#1A1A1F] text-white placeholder:text-[#B8B8C0]/30 px-4 py-3 rounded-sm focus:border-[#0DCCF2]/50 focus:outline-none text-sm w-full transition-colors";
 
   return (
-    <section id="contact" className="py-20 sm:py-32 md:py-40 bg-[#0D0D10] relative overflow-hidden">
+    <section id="contact" className="py-14 sm:py-20 md:py-28 bg-[#0D0D10] relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_100%,rgba(13,204,242,0.06),transparent)] pointer-events-none z-0"></div>
 
       <div className="px-5 sm:px-8 md:px-16 relative z-10">
