@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
 
 const WA_URL =
-  "https://wa.me/918940506900?text=Hey%2C%20I%20want%20to%20improve%20my%20business%20operations%20and%20maximise%20revenue";
+  "https://wa.me/918940506900?text=Hey%2C%20I%20want%20to%20improve%20my%20business%20operations%20and%20maximize%20revenue";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
