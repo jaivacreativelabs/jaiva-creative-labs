@@ -35,7 +35,7 @@ export function Nav() {
       >
         <a href="#" className="flex items-center gap-1 shrink-0">
           <span className="text-lg sm:text-xl font-bold font-display text-white">JAIVA</span>
-          <span className="text-lg sm:text-xl font-display text-[#B8B8C0]"> Creative Labs</span>
+          <span className="text-lg sm:text-xl font-display animated-gradient-text"> Creative Labs</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-8">

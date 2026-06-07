@@ -9,7 +9,7 @@ export function Footer() {
             <div className="sm:col-span-2 lg:col-span-1 flex flex-col items-start">
               <a href="#" className="flex items-center gap-1">
                 <span className="text-xl font-bold font-display text-white">JAIVA</span>
-                <span className="text-xl font-display text-[#B8B8C0]"> Creative Labs</span>
+                <span className="text-xl font-display animated-gradient-text"> Creative Labs</span>
               </a>
               <p className="text-[#B8B8C0] text-sm mt-3 leading-relaxed max-w-xs">
                 Premium AI and Workflow Automation consulting firm helping businesses accelerate digital transformation.
