@@ -7,9 +7,13 @@ import { Clients } from "@/components/sections/clients";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/footer";
 import { ArrowUp } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Lenis from "lenis";
+
+const WA_URL =
+  "https://wa.me/918940506900?text=Hey%2C%20I%20want%20to%20improve%20my%20business%20operations%20and%20maximise%20revenue";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -50,6 +54,23 @@ export default function Home() {
       </main>
       <Footer />
 
+      {/* WhatsApp floating button */}
+      <motion.a
+        href={WA_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.4, delay: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-8 left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-shadow"
+        aria-label="Chat on WhatsApp"
+      >
+        <SiWhatsapp className="w-7 h-7 text-white" />
+      </motion.a>
+
+      {/* Scroll to top */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button

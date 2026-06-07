@@ -68,7 +68,7 @@ export function Hero() {
               <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Automated Operations</div>
             </div>
             <div>
-              <div className="text-white font-bold text-xl sm:text-2xl">30%</div>
+              <div className="text-white font-bold text-xl sm:text-2xl">50%</div>
               <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Reduction in Manual Work</div>
             </div>
             <div>
@@ -76,7 +76,7 @@ export function Hero() {
               <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Faster Process Execution</div>
             </div>
             <div>
-              <div className="text-white font-bold text-xl sm:text-2xl">20%</div>
+              <div className="text-white font-bold text-xl sm:text-2xl">40%</div>
               <div className="text-[#B8B8C0] text-[10px] sm:text-xs tracking-wide uppercase mt-1">Operating Cost Reduction</div>
             </div>
           </motion.div>
