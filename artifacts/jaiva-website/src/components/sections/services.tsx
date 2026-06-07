@@ -42,7 +42,7 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 sm:py-32 md:py-40 bg-[#0D0D10] overflow-hidden">
+    <section id="services" className="py-14 sm:py-20 md:py-28 bg-[#0D0D10] overflow-hidden">
       <div className="px-5 sm:px-8 md:px-16">
         <div className="max-w-6xl mx-auto">
 

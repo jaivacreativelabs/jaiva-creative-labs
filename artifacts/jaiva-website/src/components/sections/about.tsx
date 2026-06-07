@@ -9,7 +9,7 @@ export function About() {
   const duplicatedIndustries = [...industries, ...industries];
 
   return (
-    <section id="about" className="py-20 sm:py-32 md:py-48 bg-[#09090B] overflow-hidden">
+    <section id="about" className="py-14 sm:py-20 md:py-28 bg-[#09090B] overflow-hidden">
 
       <div className="max-w-4xl mx-auto px-5 sm:px-8 md:px-16">
         <motion.div
@@ -31,7 +31,7 @@ export function About() {
         </motion.div>
       </div>
 
-      <div className="mt-16 sm:mt-24 overflow-hidden relative">
+      <div className="mt-10 sm:mt-14 overflow-hidden relative">
         <div className="px-5 sm:px-8 md:px-16">
           <div className="max-w-6xl mx-auto">
             <div className="uppercase text-xs tracking-[0.2em] text-[#B8B8C0]/50 mb-5 sm:mb-6">
