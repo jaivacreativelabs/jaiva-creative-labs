@@ -28,9 +28,9 @@ export function About() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display leading-tight text-white">
-            We build <span className="text-[#0DCCF2]">Intelligent Workflow Systems</span>
-            <br className="hidden md:block" />
-            {" "}that transform how your business operates.
+            We Build <span className="text-[#0DCCF2]">Intelligent Workflow Systems</span>
+            <br />
+            that transform how your business operates.
           </h2>
           <p className="text-[#B8B8C0] text-base sm:text-lg max-w-2xl mt-4 sm:mt-6">
             Our mission is to simplify complex operations using AI, advanced automation platforms, and smart integrations. We help organizations eliminate manual work and accelerate their digital transformation.
