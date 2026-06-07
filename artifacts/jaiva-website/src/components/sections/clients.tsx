@@ -4,7 +4,7 @@ export function Clients() {
   const clients = [
     { name: "Hexpertify", tag: "Automated Lead Generation & Brand Mentions" },
     { name: "Askabhi Technologies", tag: "Automated HR Process" },
-    { name: "Voogun", tag: "Workflow Automation" },
+    { name: "Voogun", tag: "Automated Staffing Workflow" },
   ];
 
   const reasons = [
