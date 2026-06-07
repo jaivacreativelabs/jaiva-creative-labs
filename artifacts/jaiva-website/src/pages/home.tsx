@@ -64,7 +64,7 @@ export default function Home() {
         transition={{ duration: 0.4, delay: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-8 left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-shadow"
+        className="fixed bottom-8 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:shadow-[0_0_30px_rgba(37,211,102,0.6)] transition-shadow"
         aria-label="Chat on WhatsApp"
       >
         <SiWhatsapp className="w-7 h-7 text-white" />
@@ -81,7 +81,7 @@ export default function Home() {
             onClick={scrollToTop}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="fixed bottom-8 right-8 w-12 h-12 rounded-none bg-[#0D0D10] border border-[#1A1A1F] text-[#B8B8C0] flex items-center justify-center hover:text-white hover:border-[#0DCCF2]/40 transition-colors z-50 cursor-pointer"
+            className="fixed bottom-24 right-6 w-12 h-12 rounded-none bg-[#0D0D10] border border-[#1A1A1F] text-[#B8B8C0] flex items-center justify-center hover:text-white hover:border-[#0DCCF2]/40 transition-colors z-50 cursor-pointer"
             aria-label="Back to top"
           >
             <ArrowUp className="w-5 h-5 pointer-events-none" />
