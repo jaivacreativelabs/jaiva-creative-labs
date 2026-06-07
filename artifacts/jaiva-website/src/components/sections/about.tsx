@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
 
 export function About() {
-  const expertise = [
-    { title: "AI Workflow Architecture", desc: "Designing robust, scalable automation architectures from the ground up." },
-    { title: "Custom Template Creation", desc: "Building specialized workflow templates that map directly to your operations." },
-    { title: "AI Chatbot Deployment", desc: "Implementing intelligent agents for customer support and internal knowledge." },
-    { title: "Enterprise Integration Systems", desc: "Connecting disparate software ecosystems into a unified flow." },
-    { title: "Process Digitization", desc: "Converting manual, paper-based operations into streamlined digital processes." },
-    { title: "Data-Driven Optimization", desc: "Continuous improvement of workflows based on performance analytics." }
-  ];
-
   const industries = [
     "Manufacturing", "Healthcare", "Education", "Retail & E-commerce",
     "Logistics", "Real Estate", "Finance", "Waste Management", "Startups & SaaS"
@@ -38,27 +29,6 @@ export function About() {
             Our mission is to simplify complex operations using AI, advanced automation platforms, and smart integrations. We help organizations eliminate manual work and accelerate their digital transformation.
           </p>
         </motion.div>
-      </div>
-
-      <div className="px-5 sm:px-8 md:px-16 mt-16 sm:mt-24">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1A1A1F]">
-          {expertise.map((exp, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-[#09090B] p-6 sm:p-8 hover:bg-[#0D0D10] transition-colors"
-            >
-              <div className="text-xs text-[#0DCCF2]/60 font-mono mb-3">
-                {String(i + 1).padStart(2, '0')}
-              </div>
-              <h3 className="text-white font-semibold text-base sm:text-lg font-display">{exp.title}</h3>
-              <p className="text-[#B8B8C0] text-sm mt-2 leading-relaxed">{exp.desc}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
 
       <div className="mt-16 sm:mt-24 overflow-hidden relative">
