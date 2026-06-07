@@ -28,7 +28,9 @@ export function About() {
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-display leading-tight text-white">
-            We Build <span className="text-[#0DCCF2]">Intelligent Workflow Systems</span>
+            We Build
+            <br />
+            <span className="text-[#0DCCF2]">Intelligent Workflow Systems</span>
             <br />
             that transform how your business operates.
           </h2>
