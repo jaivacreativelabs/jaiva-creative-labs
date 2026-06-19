@@ -78,10 +78,38 @@ export function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    setIsSuccess(true);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+  try {
+    const response = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: values.name,
+        company: values.company,
+        email: values.email,
+        phone: values.phone,
+        industry: values.industry,
+        service: values.services,
+        requirements: values.requirements,
+      }),
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+
+    if (data.success) {
+      setIsSuccess(true);
+    } else {
+      alert("Failed to send email");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Server error");
   }
+}
 
   const offeredServices = [
     "Business Automation Consultation",
