@@ -80,7 +80,7 @@ export function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
   try {
-    const response = await fetch("http://localhost:5000/api/contact", {
+    const response = await fetch("http://api.jaivalabs.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
