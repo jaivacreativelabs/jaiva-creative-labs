@@ -27,7 +27,17 @@ app.use(
   }),
 );
 
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://jaivalabs.com",
+      "https://www.jaivalabs.com",
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST", "OPTIONS"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
