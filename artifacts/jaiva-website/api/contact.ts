@@ -1,9 +1,17 @@
-import { Router } from "express";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 import nodemailer from "nodemailer";
 
-const router = Router();
+export default async function handler(
+  req: VercelRequest,
+  res: VercelResponse
+) {
+  if (req.method !== "POST") {
+    return res.status(405).json({
+      success: false,
+      message: "Method not allowed",
+    });
+  }
 
-router.post("/contact", async (req, res) => {
   try {
     const {
       name,
@@ -14,11 +22,7 @@ router.post("/contact", async (req, res) => {
       service,
       requirements,
     } = req.body;
-console.log({
-  SMTP_HOST: process.env.SMTP_HOST,
-  SMTP_PORT: process.env.SMTP_PORT,
-  SMTP_USER: process.env.SMTP_USER,
-});
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -35,7 +39,6 @@ console.log({
       subject: `New Consultation Request from ${name}`,
       html: `
         <h2>New Consultation Request</h2>
-
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Company:</strong> ${company}</p>
         <p><strong>Email:</strong> ${email}</p>
@@ -46,7 +49,7 @@ console.log({
       `,
     });
 
-    return res.json({
+    return res.status(200).json({
       success: true,
       message: "Email sent successfully",
     });
@@ -58,6 +61,4 @@ console.log({
       message: "Failed to send email",
     });
   }
-});
-
-export default router;
+}

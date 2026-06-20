@@ -65,18 +65,18 @@ export function Contact() {
   const [isSuccess, setIsSuccess] = useState(false);
   const { visibleText, showCursor } = useTypewriter();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      industry: "",
-      services: "",
-      requirements: "",
-    },
-  });
+  const form = useForm({
+  resolver: zodResolver(formSchema as any),
+  defaultValues: {
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    industry: "",
+    services: "",
+    requirements: "",
+  },
+});
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
   try {
