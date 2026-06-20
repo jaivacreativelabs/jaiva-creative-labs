@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import nodemailer from "nodemailer";
+import * as nodemailer from "nodemailer";
 
 export default async function handler(
   req: VercelRequest,
